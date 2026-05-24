@@ -8,7 +8,7 @@ import axios from "axios";
 const AuthContext = createContext();
 
 // Set base URL for all API requests
-axios.defaults.baseURL = "http://localhost:5000";
+axios.defaults.baseURL = "https://premium-qa-platform.onrender.com";
 
 export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
