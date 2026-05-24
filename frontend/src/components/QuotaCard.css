@@ -1,0 +1,44 @@
+/* QuotaCard.css */
+.quota-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 18px 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  border: 1px solid #e2e8f0;
+}
+.quota-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.quota-label { font-weight: 700; font-size: 14px; }
+.quota-badge {
+  padding: 3px 9px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 700;
+}
+.quota-count {
+  font-size: 28px;
+  font-weight: 800;
+  margin-bottom: 6px;
+  line-height: 1;
+}
+.quota-total { font-size: 14px; color: #718096; font-weight: 400; }
+
+.quota-bar-wrap {
+  background: #e2e8f0;
+  border-radius: 20px;
+  height: 7px;
+  overflow: hidden;
+  margin-bottom: 8px;
+}
+.quota-bar-fill {
+  height: 100%;
+  border-radius: 20px;
+  transition: width 0.4s;
+}
+.quota-msg { font-size: 12px; }

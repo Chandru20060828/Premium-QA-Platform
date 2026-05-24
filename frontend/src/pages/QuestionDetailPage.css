@@ -1,0 +1,55 @@
+/* QuestionDetailPage.css */
+.center-loader { text-align: center; padding: 80px; color: #718096; }
+.qd-page { max-width: 800px; }
+
+.back-link {
+  display: inline-block;
+  color: #667eea;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  text-decoration: none;
+}
+.back-link:hover { text-decoration: underline; }
+
+.qd-question { margin-top: 0; }
+.qd-title    { font-size: 22px; font-weight: 800; margin-bottom: 14px; line-height: 1.35; }
+
+.qd-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+.qd-tag  { background: #eef2ff; color: #667eea; padding: 3px 10px; border-radius: 20px; font-size: 12px; font-weight: 600; }
+.qd-chip { font-size: 12px; color: #a0aec0; }
+
+.qd-body   { font-size: 15px; line-height: 1.75; color: #4a5568; white-space: pre-wrap; }
+.qd-author { margin-top: 14px; padding-top: 14px; border-top: 1px solid #eee; font-size: 13px; color: #a0aec0; }
+
+.answers-heading { font-weight: 700; font-size: 18px; margin: 28px 0 14px; }
+
+.no-answers {
+  background: #f7fafc;
+  border-radius: 12px;
+  padding: 24px;
+  text-align: center;
+  color: #a0aec0;
+  font-size: 14px;
+}
+
+.answer-card {
+  margin-bottom: 12px;
+  border-left: 4px solid #667eea;
+}
+.answer-body { font-size: 14px; line-height: 1.75; color: #4a5568; white-space: pre-wrap; }
+.answer-meta { margin-top: 10px; font-size: 12px; color: #a0aec0; }
+
+.post-answer-card { margin-top: 24px; }
+.post-answer-title { font-weight: 700; margin-bottom: 14px; font-size: 16px; }
+
+@media (max-width: 600px) {
+  .qd-title { font-size: 18px; }
+  .qd-body  { font-size: 14px; }
+  .answers-heading { font-size: 16px; }
+}

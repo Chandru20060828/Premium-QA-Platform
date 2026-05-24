@@ -1,0 +1,35 @@
+/* AskQuestionPage.css */
+.ask-layout {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 24px;
+  align-items: start;
+}
+.ask-sidebar { display: flex; flex-direction: column; gap: 16px; }
+
+.field-hint { color: #a0aec0; font-size: 12px; margin-top: 4px; display: block; }
+
+.tag-preview { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+.q-tag-preview {
+  background: #eef2ff; color: #667eea;
+  padding: 3px 10px; border-radius: 20px;
+  font-size: 12px; font-weight: 600;
+}
+
+.tips-card { padding: 20px; }
+.tips-title { font-weight: 700; margin-bottom: 10px; font-size: 14px; }
+.tips-list {
+  font-size: 13px; color: #718096;
+  padding-left: 18px; line-height: 2;
+}
+
+@media (max-width: 900px) {
+  .ask-layout { grid-template-columns: 1fr; }
+  .ask-sidebar { flex-direction: row; flex-wrap: wrap; }
+  .ask-sidebar > * { flex: 1; min-width: 240px; }
+}
+
+@media (max-width: 600px) {
+  .ask-sidebar { flex-direction: column; }
+  .ask-sidebar > * { min-width: unset; }
+}

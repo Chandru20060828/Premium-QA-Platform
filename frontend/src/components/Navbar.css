@@ -1,0 +1,257 @@
+/* =============================================
+   Navbar.css - Responsive Navigation Styles
+   ============================================= */
+
+.navbar {
+  background: #fff;
+  border-bottom: 1px solid #e2e8f0;
+  position: sticky;
+  top: 0;
+  z-index: 200;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.navbar-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.navbar-logo {
+  font-weight: 800;
+  font-size: 18px;
+  color: #667eea;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+  text-decoration: none;
+}
+
+/* ---- Desktop Nav Links ---- */
+.navbar-links {
+  display: flex;
+  gap: 2px;
+  flex: 1;
+}
+
+.navbar-link {
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #4a5568;
+  text-decoration: none;
+  transition: all 0.15s;
+  white-space: nowrap;
+}
+.navbar-link:hover { background: #f7fafc; color: #667eea; }
+.navbar-link.active { background: #eef2ff; color: #667eea; font-weight: 700; }
+
+/* ---- Desktop Right ---- */
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: auto;
+}
+
+.plan-badge {
+  padding: 3px 9px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.quota-chip {
+  font-size: 12px;
+  color: #718096;
+  background: #f7fafc;
+  padding: 4px 9px;
+  border-radius: 20px;
+  border: 1px solid #e2e8f0;
+  white-space: nowrap;
+}
+
+/* ---- User Menu ---- */
+.user-menu-wrap { position: relative; }
+
+.user-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 10px;
+  background: none;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+  color: #2d3748;
+}
+
+.avatar {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: #fff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 13px;
+  flex-shrink: 0;
+}
+.avatar-lg { width: 40px; height: 40px; font-size: 18px; }
+
+.user-name {
+  font-size: 13px;
+  max-width: 100px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.dropdown {
+  position: absolute;
+  right: 0;
+  top: calc(100% + 8px);
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+  min-width: 180px;
+  overflow: hidden;
+  z-index: 300;
+}
+.drop-item {
+  display: block;
+  padding: 10px 16px;
+  font-size: 13px;
+  color: #2d3748;
+  text-decoration: none;
+  transition: background 0.15s;
+}
+.drop-item:hover { background: #f7fafc; }
+.drop-hr { margin: 4px 0; border: none; border-top: 1px solid #eee; }
+.drop-logout {
+  display: block;
+  width: 100%;
+  padding: 10px 16px;
+  font-size: 13px;
+  color: #e53e3e;
+  background: none;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+}
+.drop-logout:hover { background: #fff5f5; }
+
+/* ---- Hamburger (hidden on desktop) ---- */
+.hamburger {
+  display: none;
+  margin-left: auto;
+  background: none;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 4px 10px;
+  color: #4a5568;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+/* ---- Mobile Drawer ---- */
+.mobile-drawer {
+  position: fixed;
+  top: 60px;
+  left: 0;
+  right: 0;
+  background: #fff;
+  z-index: 190;
+  border-bottom: 1px solid #e2e8f0;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+  display: flex;
+  flex-direction: column;
+  max-height: calc(100vh - 60px);
+  overflow-y: auto;
+}
+
+.drawer-user {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 20px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.drawer-quota {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background: #f7fafc;
+  font-size: 13px;
+  color: #718096;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.drawer-link {
+  display: block;
+  padding: 15px 20px;
+  font-size: 15px;
+  font-weight: 500;
+  color: #2d3748;
+  border-bottom: 1px solid #f7fafc;
+  text-decoration: none;
+  transition: background 0.15s;
+}
+.drawer-link:hover { background: #f7fafc; }
+.drawer-link.drawer-active { background: #eef2ff; color: #667eea; font-weight: 700; }
+
+.drawer-logout {
+  display: block;
+  width: 100%;
+  padding: 15px 20px;
+  background: none;
+  border: none;
+  font-size: 15px;
+  font-weight: 600;
+  color: #e53e3e;
+  text-align: left;
+  cursor: pointer;
+}
+.drawer-logout:hover { background: #fff5f5; }
+
+.drawer-backdrop {
+  position: fixed;
+  inset: 0;
+  top: 60px;
+  background: rgba(0,0,0,0.4);
+  z-index: 180;
+}
+
+/* ====================================================
+   RESPONSIVE BREAKPOINTS
+   ==================================================== */
+
+@media (max-width: 768px) {
+  .navbar-links  { display: none; }
+  .navbar-right  { display: none; }
+  .hamburger     { display: block; }
+  .navbar-logo   { font-size: 16px; }
+  .navbar-inner  { padding: 0 14px; gap: 10px; }
+}
+
+@media (min-width: 769px) {
+  .hamburger       { display: none; }
+  .mobile-drawer   { display: none; }
+  .drawer-backdrop { display: none; }
+}

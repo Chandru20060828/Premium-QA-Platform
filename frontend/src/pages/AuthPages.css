@@ -1,0 +1,36 @@
+/* AuthPages.css — Shared Login & Register styles */
+.auth-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #667eea22, #764ba222);
+  padding: 20px;
+}
+
+.auth-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 40px 36px;
+  width: 100%;
+  max-width: 440px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.12);
+}
+
+.auth-header  { text-align: center; margin-bottom: 26px; }
+.auth-icon    { font-size: 48px; margin-bottom: 12px; }
+.auth-title   { font-size: 26px; font-weight: 800; color: #2d3748; }
+.auth-subtitle{ color: #718096; font-size: 14px; margin-top: 4px; }
+
+.auth-footer  { text-align: center; margin-top: 20px; font-size: 14px; color: #718096; }
+.auth-link    { color: #667eea; font-weight: 600; text-decoration: none; }
+.auth-link:hover { text-decoration: underline; }
+
+@media (max-width: 480px) {
+  .auth-card {
+    padding: 28px 20px;
+    border-radius: 12px;
+  }
+  .auth-title { font-size: 22px; }
+  .auth-icon  { font-size: 38px; }
+}
